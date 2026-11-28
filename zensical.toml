@@ -1,0 +1,79 @@
+# BIO Pipeline Check documentation - built with Zensical (https://zensical.org), same design as shift-mox
+#   pip install -r requirements-docs.txt
+#   zensical serve            # preview on http://localhost:8000
+#   zensical build --strict   # what CI runs
+
+[project]
+site_name = "BIO Pipeline Check"
+site_description = "Scan Ansible, Helm and OpenShift manifests for hardening issues mapped to BIO2 control categories - as a CI gate"
+site_url = "https://jwklijnsma.github.io/Test-bio-pipeline-check/"
+repo_url = "https://github.com/jwklijnsma/Test-bio-pipeline-check"
+repo_name = "jwklijnsma/Test-bio-pipeline-check"
+edit_uri = "edit/main/docs/"
+copyright = "BIO Pipeline Check - a heuristic security linter, not a compliance attestation"
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = [
+    { "Requirements and install" = "install.md" },
+    { "Usage" = "usage.md" },
+  ] },
+  { "CI/CD" = "ci.md" },
+  { "Checks reference" = "checks.md" },
+  { "Reference" = [
+    { "Testing" = "testing.md" },
+    { "Extending" = "extending.md" },
+    { "Limitations" = "limitations.md" },
+    { "Contributing and license" = "contributing.md" },
+  ] },
+]
+
+[project.theme]
+language = "en"
+features = [
+  "content.action.edit",
+  "content.code.annotate",
+  "content.code.copy",
+  "navigation.footer",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "search.highlight",
+]
+
+[project.theme.icon]
+logo = "material/shield-check"
+repo = "fontawesome/brands/github"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "blue grey"
+accent = "deep orange"
+toggle.icon = "material/weather-night"
+toggle.name = "Dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "blue grey"
+accent = "deep orange"
+toggle.icon = "material/weather-sunny"
+toggle.name = "Light mode"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.snippets = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
